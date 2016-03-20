@@ -1,0 +1,73 @@
+html,body{
+	font-family: 'Microsoft Yahei';
+	font-size: 14px;
+	color: #333;
+	min-width: 1200px;
+}
+body,h1,h2,p{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+.left{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 370px;
+	box-shadow: 0px 0 7px #eee;
+	min-height: 750px;
+	background-color: #eee;
+}
+.left .headH{
+	margin-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.left .headA{
+	display: inline-block;
+}
+.left .header{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.left .name{
+	font-size: 20px;
+	margin-bottom: 16px;
+}
+.left .intext{
+	font-size: 14px;
+}
+.left .intro{
+	text-align: center;
+	padding: 0 35px 0;
+	margin-bottom: 60px;
+}
+.left .intro a{
+	color: #333;
+}
+.left .navLi{
+	height: 45px;
+	text-align:center;
+	margin-bottom: 8px;
+}
+.left .navLink{
+	display: block;
+	color: #333;
+	line-height: 45px;
+	transition: all .2s;
+}
+.left .navLink:hover{
+	background-color: #8E8CD8;
+	color: #fff;
+}
+.left .lNavAct{
+	background-color: #8E8CD8;
+	color: #fff;
+}

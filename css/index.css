@@ -98,6 +98,7 @@ a{
 }
 .main .mainContent{
 	margin-top: 44px;
+	min-width: 754px;
 	padding: 0 254px 0 100px;
 }
 .mainContent .article{
@@ -127,4 +128,9 @@ a{
 }
 .artList .articleDate{
 	float: right;
+}
+.mainContent .noteContent{
+	background-color: #F6F6F6;
+	padding: 20px 40px;
+	min-height: 600px;
 }

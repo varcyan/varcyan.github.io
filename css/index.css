@@ -3,6 +3,8 @@ html,body{
 	font-size: 14px;
 	color: #333;
 	min-width: 1200px;
+	height: 100%;
+	background-color: #F2F2F2;
 }
 body,h1,h2,p{
 	margin: 0;
@@ -19,10 +21,10 @@ a{
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 370px;
-	box-shadow: 0px 0 7px #eee;
-	min-height: 750px;
-	background-color: #eee;
+	width: 300px;
+	min-height: 700px;
+	border-right: 1px solid #eee;
+	background-color: #F5F5F5;
 }
 .left .headH{
 	margin-top: 50px;
@@ -64,10 +66,65 @@ a{
 	transition: all .2s;
 }
 .left .navLink:hover{
-	background-color: #8E8CD8;
-	color: #fff;
+	color: #8E8CD8;
 }
-.left .lNavAct{
+.left .navLi .lNavAct{
 	background-color: #8E8CD8;
 	color: #fff;
+	margin-right: -1px;
+}
+.main{
+	position: absolute;
+	left: 300px;
+	top: 0;
+	right:0;
+	bottom: 0;
+	height: 100%;
+	overflow: auto;
+}
+.main .mainTop{
+	position: fixed;
+	top: 0;
+	left: 300px;
+	height: 44px;
+	width: 100%;
+	border-bottom: 1px solid #eee;
+	background-color: rgba(255,255,255, .2);
+}
+.mainTop .topText{
+	line-height: 44px;
+	margin-left: 20px;
+	color: #333;
+}
+.main .mainContent{
+	margin-top: 44px;
+	padding: 0 254px 0 100px;
+}
+.mainContent .article{
+	width: 600px;
+	padding-top: 30px;
+}
+.mainContent .artList{
+	position: relative;
+	height: 60px;
+	background-color: #f6f6f6;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	line-height: 65px;
+	border-bottom: 3px solid #f6f6f6;
+	transition: all .2s;
+}
+.mainContent .artList:hover{
+	border-bottom: 3px solid #8E8CD8;
+}
+.artList .articleA{
+	float: left;
+	color: #333;
+	padding: 0 10px;
+}
+.artList .articleA:hover{
+	color: #8E8CD8;
+}
+.artList .articleDate{
+	float: right;
 }

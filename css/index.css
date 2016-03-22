@@ -1,111 +1,8 @@
-html,body{
-	font-family: 'Microsoft Yahei';
-	font-size: 14px;
-	color: #333;
-	min-width: 1200px;
-	height: 100%;
-	background-color: #F2F2F2;
-}
-body,h1,h2,p{
-	margin: 0;
-}
-ul{
-	margin: 0;
-	padding: 0;
-	list-style:none;
-}
-a{
-	text-decoration: none;
-}
-.left{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 300px;
-	min-height: 700px;
-	border-right: 1px solid #eee;
-	background-color: #F5F5F5;
-}
-.left .headH{
-	margin-top: 50px;
-	margin-bottom: 30px;
-	text-align: center;
-}
-.left .headA{
-	display: inline-block;
-}
-.left .header{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-}
-.left .name{
-	font-size: 20px;
-	margin-bottom: 16px;
-}
-.left .intext{
-	font-size: 14px;
-}
-.left .intro{
-	text-align: center;
-	padding: 0 35px 0;
-	margin-bottom: 60px;
-}
-.left .intro a{
-	color: #333;
-}
-.left .navLi{
-	height: 45px;
-	text-align:center;
-	margin-bottom: 8px;
-}
-.left .navLink{
-	display: block;
-	color: #333;
-	line-height: 45px;
-	transition: all .2s;
-}
-.left .navLink:hover{
-	color: #8E8CD8;
-}
-.left .navLi .lNavAct{
-	background-color: #8E8CD8;
-	color: #fff;
-	margin-right: -1px;
-}
-.main{
-	position: absolute;
-	left: 300px;
-	top: 0;
-	right:0;
-	bottom: 0;
-	height: 100%;
-	overflow: auto;
-}
-.main .mainTop{
-	position: fixed;
-	top: 0;
-	left: 300px;
-	height: 44px;
-	width: 100%;
-	border-bottom: 1px solid #eee;
-	background-color: rgba(255,255,255, .2);
-}
-.mainTop .topText{
-	line-height: 44px;
-	margin-left: 20px;
-	color: #333;
-}
-.main .mainContent{
-	margin-top: 44px;
-	min-width: 754px;
-	padding: 0 254px 0 100px;
-}
-.mainContent .article{
+.article{
 	width: 600px;
 	padding-top: 30px;
 }
-.mainContent .artList{
+.artList{
 	position: relative;
 	height: 60px;
 	background-color: #f6f6f6;
@@ -115,7 +12,7 @@ a{
 	border-bottom: 3px solid #f6f6f6;
 	transition: all .2s;
 }
-.mainContent .artList:hover{
+.artList:hover{
 	border-bottom: 3px solid #8E8CD8;
 }
 .artList .articleA{
@@ -128,9 +25,4 @@ a{
 }
 .artList .articleDate{
 	float: right;
-}
-.mainContent .noteContent{
-	background-color: #F6F6F6;
-	padding: 20px 40px;
-	min-height: 600px;
 }

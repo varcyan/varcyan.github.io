@@ -5,7 +5,6 @@
 	background-color: #F6F6F6;
 	padding: 80px 40px 40px 40px;
 	min-width: 596px;
-	height: 100%;
 }
 .weekBox{
 	float: left;
@@ -47,4 +46,21 @@
 	width: 500px;
 	background-color: #eee;
 	margin-bottom: 1px;
+}
+.noteTitle{
+	margin-bottom: 20px;
+}
+.wriH2{
+	margin-bottom: 12px;
+}
+.codeBox{
+	padding-left: 12px;
+	border-left: 3px solid #8E8CD8;
+	background-color: #333;
+	color: #fff;
+	width: 596px;
+}
+.ariticle p{
+	line-height: 24px;
+	margin-bottom: 35px;
 }

@@ -1,13 +1,12 @@
 .article{
 	width: 600px;
-	padding-top: 30px;
+	padding-top: 62px;
 }
 .artList{
-	position: relative;
 	height: 60px;
 	background-color: #f6f6f6;
 	margin-bottom: 10px;
-	padding: 0 20px;
+	padding: 0 20px 0 10px;
 	line-height: 65px;
 	border-bottom: 3px solid #f6f6f6;
 	transition: all .2s;
@@ -18,7 +17,7 @@
 .artList .articleA{
 	float: left;
 	color: #333;
-	padding: 0 10px;
+	padding: 0 30px;
 }
 .artList .articleA:hover{
 	color: #8E8CD8;

@@ -1,40 +1,27 @@
-/* css reset */
-body{
-	margin: 0;
+.article{
+	width: 600px;
+	padding-top: 62px;
 }
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.artList{
+	height: 60px;
+	background-color: #f6f6f6;
+	margin-bottom: 10px;
+	padding: 0 20px 0 10px;
+	line-height: 65px;
+	border-bottom: 3px solid #f6f6f6;
+	transition: all .2s;
 }
-a {
-	text-decoration: none;
+.artList:hover{
+	border-bottom: 3px solid #8E8CD8;
 }
-/* tools */
-/* global */
-body {
-	font: 14px 'Source Code Pro','Microsoft Yahei';
+.artList .articleA{
+	float: left;
+	color: #333;
+	padding: 0 30px;
 }
-.content {
-	width: 800px;
-	margin: 0 auto;
+.artList .articleA:hover{
+	color: #8E8CD8;
 }
-/* index */
-.head .content {
-	border-bottom: 2px solid #333;
+.artList .articleDate{
+	float: right;
 }
-.main {
-	padding: 20px 0;
-}
-	.main .art_list li{
-		border-bottom: 1px solid #888;
-		line-height: 30px;
-	}
-	.main .art_list li a {
-		display: flex;
-		justify-content: space-between;
-		color: #333;
-	}
-	.main .art_list li a:hover {
-		text-decoration: underline;
-	}

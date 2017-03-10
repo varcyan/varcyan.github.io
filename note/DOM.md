@@ -203,3 +203,8 @@ function rmClass(obj, cls){
 	}
 }
 ```
+### JOSN
+
+通过JSON.parse() 可以把JSON字符串转化成JSON对象
+
+通过JSON.stringify() 可以把JSON对象转化为JSON字符串

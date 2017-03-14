@@ -237,5 +237,18 @@ console.log(res);
 - arg：可选参数，如果传了它，那么第一次遍历数组的回调函数的first就是arg
 
 
+#### arr.filter
 
+**语法**
+
+> arr.filter(function (){
+> ​	return 判断条件
+> })
+
+#### arr.fill
+
+**语法**
+
+> arr.fill(function (){
+> })
 

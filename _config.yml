@@ -2,7 +2,7 @@
 
 title: accent
 url: "https://varcyan.github.io/"
-baseurl: "/accent"
+baseurl: "/"
 
 # This will show up at the top of index page
 site_heading: >

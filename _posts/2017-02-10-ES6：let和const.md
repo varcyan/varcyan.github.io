@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ES6:let和const"
+title: "ES6: let和const"
 description: "ES6let和const的学习总结."
 date: 2017-02-10
 tags: [ES6,JavaScript]
@@ -8,15 +8,13 @@ comments: true
 share: true
 ---
 
-# ES6：let和const
-
 ## let
 
 ### 基本用法
 
 >   ES6 新增了`let`命令，用来声明变量。它的用法类似于`var`，但是所声明的变量，只在`let`命令所在的代码块内有效。
 
-```
+```javascript
 {
   let a = 1;
   var b = 2;
@@ -58,11 +56,7 @@ b => 2
 
 1.  用let声明的变量在当前代码块及子代码块中有效
 
-2.  允许块级作用域随意嵌套
-
-    ```
-    {{{ let a= 1 }}}
-    ```
+2.  允许块级作用域随意嵌套`{{{ let a = 1 }}}`
 
 3.  ES6 引入了块级作用域，明确允许在块级作用域之中声明函数。ES6 规定，块级作用域之中，函数声明语句的行为类似于`let`，在块级作用域之外不可引用。(ES6浏览器)
 
@@ -70,24 +64,22 @@ b => 2
 
 本质上，块级作用域是一个语句，将多个操作封装在一起，没有返回值。
 
-```
+```javascript
 {
   let t = f();
   t = t * t + 1;
 }
-
 ```
 
 上面代码中，块级作用域将两个语句封装在一起。但是，在块级作用域以外，没有办法得到`t`的值，因为块级作用域不返回值，除非`t`是全局变量。
 
 现在有一个[提案](http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions)，使得块级作用域可以变为表达式，也就是说可以返回值，办法就是在块级作用域之前加上`do`，使它变为`do`表达式。
 
-```
+```javascript
 let x = do {
   let t = f();
   t * t + 1;
 };
-
 ```
 
 上面代码中，变量`x`会得到整个块级作用域的返回值。
@@ -116,14 +108,14 @@ let x = do {
 对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指针，`const`只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。
 
 ```javascript
-const C = 1;	//约定变量名全都大写，不能更改
-C = 100; 		//报错；const声明的值不能被更改
+const C = 1;  // 约定变量名全都大写，不能更改
+C = 100;  // 报错；const声明的值不能被更改
 
 // 如果指向引用类型的值，可以操作這个值，但是指针的指向不能被修改
 const A = [];
 A.push(1000);
 console.log(A); // 1000
-A = {a: 1};		// 报错
+A = {a: 1}; // 报错
 ```
 
 ### 冻结对象
@@ -160,9 +152,11 @@ ES5的顶层对象，本身也是一个问题，因为它在各种实现里面�
 -   浏览器和 Web Worker 里面，`self`也指向顶层对象，但是Node没有`self`。
 -   Node 里面，顶层对象是`global`，但其他环境都不支持。
 
-综上所述，很难找到一种方法，可以在所有情况下，都取到顶层对象。下面是两种勉强可以使用的方法。
+综上所述，很难找到一种方法，可以在所有情况下，都取到顶层对象。
 
-```
+下面是两种勉强可以使用的方法。
+
+```javascript
 // 方法一
 (typeof window !== 'undefined'
    ? window
@@ -186,7 +180,7 @@ var getGlobal = function () {
 
 垫片库[`system.global`](https://github.com/ljharb/System.global)模拟了这个提案，可以在所有环境拿到`global`。
 
-```
+```javascript
 // CommonJS的写法
 require('system.global/shim')();
 
@@ -197,7 +191,7 @@ import shim from 'system.global/shim'; shim();
 
 上面代码可以保证各种环境里面，`global`对象都是存在的。
 
-```
+```javascript
 // CommonJS的写法
 var global = require('system.global')();
 

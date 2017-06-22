@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "cookie, localStrage, sessionStorage"
+title: "cookie和本地存储"
 description: "cookie, localStrage, sessionStorage的区别."
 date: 2016-03-10
-tags: [JavaScript, cookie, localStrage, sessionStorage]
+tags: [JavaScript, cookie, 本地存储]
 comments: true
 share: true
 ---
-
-#cookie、localstorage、sessionStorage
 
 ### cookie
 
@@ -26,17 +24,17 @@ cookies的创建需要给出cookies的名称和对应的cookies值，必备属�
 
     >   name属性是用来唯一表示cookies的，cookies的name属性可以自定义。与其他属性不同，document对象的cookies属性赋值时，并不会替代原来的值，而是会创建新的cookies.
 
--   设置的cookie存在于session（会话），也就是在访问的这个时间，一旦关闭浏览器，会话结束，cookie自动清空
+    -   设置的cookie存在于session（会话），也就是在访问的这个时间，一旦关闭浏览器，会话结束，cookie自动清空
 
--   想要在浏览器关闭之后还有cookie,需要设置过期时间(格林尼治标准时间文本字符串)
+    -   想要在浏览器关闭之后还有cookie,需要设置过期时间(格林尼治标准时间文本字符串)
 
-    ```
+    ```javascript
     document.cookies = name+"="+value; "expires="+now.toUTCString();
     ```
 
 2.  定义cookies的目录范围（path属性）
 
-    ```
+    ```javascript
     document.cookies = "user=Tom;path=/view";
     ```
 
@@ -44,7 +42,7 @@ cookies的创建需要给出cookies的名称和对应的cookies值，必备属�
 
     domain属性能够实现跨服务器的共享。
 
-    ```
+    ```javascript
     document.cookies = "user=Tom;domain=.cyan.com";
     ```
 
@@ -52,23 +50,24 @@ cookies的创建需要给出cookies的名称和对应的cookies值，必备属�
 
     secure属性规定cookies只能在安全的Internet上连接。
 
-    ```
+    ```javascript
     document.cookies = "user=Tom;secure=true";
     ```
 
 #### cookie存储信息的说明
 
-cookies 本身的使用是有限制的，在用户的计算机上，每个服务器或域只能保存最多20个cookies，而每个浏览器的cookies总数不能超过300，cookies的最大尺寸的4k，因此不能像使用变量一样，随意的创建cookies。考虑到cookies的限制，最有效的方法是将所有需要保存到cookies中的值链接为一个字串（使用分隔符分隔），然后把这个字串赋值给一个cookies。这样，只需要创建一个cookies，就能保存若干的信息了。读取时，按照分隔符的组合规则进行信息的提取和还原。
+cookies 本身的使用是有限制的，在用户的计算机上，每个服务器或域只能保存最多20个cookies，而每个浏览器的cookies总数不能超过300，cookies的最大尺寸的4k。因此不能像使用变量一样，随意的创建cookies。  
+考虑到cookies的限制，最有效的方法是将所有需要保存到cookies中的值链接为一个字串（使用分隔符分隔），然后把这个字串赋值给一个cookies。这样，只需要创建一个cookies，就能保存若干的信息了。读取时，按照分隔符的组合规则进行信息的提取和还原。
 
 如果要保存姓名、年龄、性别、城市、邮编这五个消息，先将消息组合成一个字串：
 
-```
+```javascript
 user=Tom&age=25&sex=male&city=nanjing&zip=210000
 ```
 
 然后创建一个cookies，因为字串中包含非字母和数字字符，因此在赋值前先进行编码：
 
-```
+```javascript
 document.cookie = "allinfo="+escape("user=Tom&age=25&sex=male&city=nanjing&zip=210000");
 ```
 

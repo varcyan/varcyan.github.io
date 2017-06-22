@@ -3,36 +3,21 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Kiko Plus"
+name:               "青"
 
 author:
-  facebook:         your-id
-  youtubeUser:      your-id
-  youtubeChannel:   your-id
-  twitter:          your-id
-  github:           your-id
-  stackoverflow:    your-id
-  quora:            your-id
-  linkedin:         your-id
-  pinterest:        your-id
-  googlePlus:       your-id
-  instagram:        your-id
-  reddit:           your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
+  github:           varcyan
+  email:            varcyan@qq.com
 
 copyright:
   year:             2017
-  name:             Kiko
+  name:             varycan
 
-# Google-analytics
-google-analytics:
-  id:               ""
+
 
 # Disqus
 disqus:
-  id:               "kiko-plus"
+  id:               "varcyan"
 
 # URL
 url:                "https://varcyan.github.io" # the base hostname & protocol for your site
@@ -85,6 +70,12 @@ defaults:
       layout:       "post"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+# 本地调试应当把gems改成plugins
+# plugins:
+#   - jekyll-seo-tag
+#   - jekyll-paginate
+#   - jekyll-admin
+
 gems:
   - jekyll-seo-tag
   - jekyll-paginate

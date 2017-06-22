@@ -92,6 +92,6 @@ plugins:
 
 exclude:            [vendor]
 
-safe: false
+safe: true
 
 encoding: utf-8

@@ -8,8 +8,6 @@ comments: true
 share: true
 ---
 
-# AJAX中的GET请求、POST请求
-
 *以下是HTML标准对HTTP协议的用法的约定，并不是HTTP的要求*
 
 ### GET请求

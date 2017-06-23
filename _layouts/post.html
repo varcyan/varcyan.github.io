@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<script src="/assets/js/jquery-3.2.0.js"></script>
+<script src="/assets/js/toc.js"></script>
+<div id="toc"></div>
 <header>
   <div class="header-small">
     <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
@@ -35,3 +38,8 @@ layout: default
   {% endif %}
 
 </div>
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){$('#toc').toc();});
+  </script>

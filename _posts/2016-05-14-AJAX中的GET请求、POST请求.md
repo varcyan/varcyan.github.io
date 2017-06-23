@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ajax的请求方式"
+title: "Ajax的请求方式get、post"
 description: "Ajax请求方式get、post."
 date: 2016-05-14
 tags: [JavaScript, AJAX, GET, POST]

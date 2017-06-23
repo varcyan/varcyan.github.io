@@ -23,6 +23,12 @@ body {
   overflow: auto;
 }
 
+#toc {
+  position: fixed;
+  top: 5rem;
+  left: 3rem;
+}
+
 .content-container {
   max-width: 42rem;
   padding: 4.2rem 1rem 1rem 1rem;

@@ -25,8 +25,24 @@ body {
 
 #toc {
   position: fixed;
+  max-width: 300px;
+  max-height: 610px;
+  overflow-x: hidden;
+  overflow-y: auto;
   top: 5rem;
-  left: 3rem;
+  left: 3.5rem;
+  ol li {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media all and (min-width:1200px){
+  #toc {
+    display: none;
+  }
 }
 
 .content-container {
